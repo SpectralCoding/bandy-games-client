@@ -9,18 +9,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BandyClient {
+namespace BandyClient.Windows {
 	/// <summary>
-	/// Interaction logic for LoginWindow.xaml
+	/// Interaction logic for LoginWnd.xaml
 	/// </summary>
-	public partial class LoginWindow : Window {
-		public LoginWindow() {
+	public partial class LoginWnd : Window {
+		public LoginWnd() {
 			InitializeComponent();
-			// Allow dragging anywhere on the window.
-			//MouseLeftButtonDown += delegate { DragMove(); };
 		}
 
 		private void ForgotPasswordLbl_MouseUp(object sender, MouseButtonEventArgs e) {
@@ -38,5 +35,6 @@ namespace BandyClient {
 		private void LoginCmd_Click(object sender, RoutedEventArgs e) {
 			throw new NotImplementedException();
 		}
+
 	}
 }
