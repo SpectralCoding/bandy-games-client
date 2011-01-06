@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Name="TextBoxStylesRes">
+	
+	<Style
+		x:Key="Txt_InvalidEntry"
+		TargetType="{x:Type TextBox}">
+		<Setter
+			Property="Background"
+			Value="#FFFFFF" />
+	</Style>
+
+</ResourceDictionary>

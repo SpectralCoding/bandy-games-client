@@ -25,7 +25,8 @@ namespace BandyClient.Windows {
 		}
 
 		private void CreateAccountLbl_MouseUp(object sender, MouseButtonEventArgs e) {
-			throw new NotImplementedException();
+			CreateAcctWnd CreateAcctWnd = new CreateAcctWnd();
+			CreateAcctWnd.Show();
 		}
 
 		private void CloseBtn_Click(object sender, RoutedEventArgs e) {

@@ -1,10 +1,329 @@
 ﻿<Window x:Class="BandyClient.Windows.CreateAcctWnd"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="CreateAcctWnd"
-		Height="300"
-		Width="300">
-    <Grid>
-        
-    </Grid>
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Style="{DynamicResource ResourceKey=Wnd_Modal}"
+	Title="Create an Account"
+	WindowStartupLocation="CenterScreen"
+	mc:Ignorable="d"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DesignHeight="632"
+	d:DesignWidth="561"
+	SizeToContent="WidthAndHeight">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="/Styles/WindowStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/BorderStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/LabelTextBlockStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/TextBoxStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/ImageStylesRes.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Border
+		Style="{DynamicResource Border_ModalWhiteRounded}"
+		Height="565"
+		Width="501">
+		<Grid Name="CreateAcctGrd"
+			Width="478"
+			Height="540">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="47" />
+				<RowDefinition
+					Height="293" />
+				<RowDefinition
+					Height="405*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="271" />
+				<ColumnDefinition
+					Width="231*" />
+			</Grid.ColumnDefinitions>
+			<Label
+				Content="Create an Account"
+				FontFamily="Calibri"
+				FontSize="32"
+				FontWeight="Bold"
+				Foreground="White"
+				Height="46"
+				HorizontalContentAlignment="Center"
+				Margin="6,0"
+				Name="TitleLbl"
+				Padding="0"
+				VerticalAlignment="Top"
+				Grid.ColumnSpan="2" />
+			<TextBox
+				Height="23"
+				Margin="6,27,8,0"
+				Name="UsernameTxt"
+				VerticalAlignment="Top"
+				TabIndex="0"
+				Grid.Row="1"
+				LostFocus="UsernameTxt_LostFocus" />
+			<Label
+				Content="Username"
+				HorizontalAlignment="Left"
+				Margin="6,10,0,0"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<Label
+				Content="Password"
+				HorizontalAlignment="Left"
+				Margin="6,57,0,0"
+				VerticalAlignment="Top"
+				Width="50"
+				Grid.Row="1" />
+			<PasswordBox
+				Height="23"
+				Margin="6,74,8,0"
+				Name="PasswordTxt"
+				VerticalAlignment="Top"
+				TabIndex="1"
+				Grid.Row="1"
+				LostFocus="PasswordTxt_LostFocus" />
+			<Label
+				Content="Confirm Password"
+				HorizontalAlignment="Left"
+				Margin="6,104,0,0"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<PasswordBox
+				Height="23"
+				Margin="6,121,8,0"
+				Name="ConfirmPasswordTxt"
+				VerticalAlignment="Top"
+				TabIndex="2"
+				Grid.Row="1"
+				LostFocus="ConfirmPasswordTxt_LostFocus" />
+			<TextBox
+				Grid.Row="2"
+				Height="150"
+				Margin="6,16,6,0"
+				Name="TermsOfServiceTxt"
+				VerticalAlignment="Top"
+				Grid.ColumnSpan="2"
+				VerticalScrollBarVisibility="Visible"
+				AcceptsReturn="True"
+				xml:space="preserve"
+				TextWrapping="Wrap"
+				IsReadOnly="True"
+				Background="White"
+				TabIndex="9">Bandy Games Terms and Conditions of Use
+
+1. Terms
+By accessing this gaming service, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this service. The materials contained in this system are protected by applicable copyright and trade mark law.
+
+2. Disclaimer
+   1. The materials on SpectralCoding's application are provided "as is". SpectralCoding makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, SpectralCoding does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its service or otherwise relating to such materials or on any entities linked to this service.
+
+3. Limitations
+In no event shall SpectralCoding or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on SpectralCoding's serve, even if SpectralCoding or a SpectralCoding authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+
+4. Revisions and Errata
+The materials appearing on SpectralCoding's web site or in its service could include technical, typographical, or photographic errors. SpectralCoding does not warrant that any of the materials on its web site or in its service are accurate, complete, or current. SpectralCoding may make changes to the materials contained on its web site or service at any time without notice. SpectralCoding does not, however, make any commitment to update the materials.
+
+Any claim relating to SpectralCoding's web site shall be governed by the laws of the State of Arizona without regard to its conflict of law provisions.
+
+General Terms and Conditions applicable to Use
+
+Privacy Policy
+
+Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
+
+    * Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
+    * We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.
+    * We will only retain personal information as long as necessary for the fulfillment of those purposes.
+    * We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+    * Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
+    * We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
+    * We will make readily available to customers information about our policies and practices relating to the management of personal information.
+
+We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</TextBox>
+			<CheckBox
+				Content="I have read and agree to the Terms of Service"
+				Foreground="White"
+				Height="16"
+				HorizontalAlignment="Left"
+				Margin="6,176,0,0"
+				Name="TermsOfServiceChk"
+				TabIndex="6"
+				VerticalAlignment="Top"
+				Grid.Row="2"
+				Checked="TermsOfServiceChk_Checked" />
+			<Button
+				Content="Register"
+				Grid.Column="1"
+				Grid.Row="2"
+				Height="23"
+				Margin="0,172,6,0"
+				Name="RegisterBtn"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Right"
+				Width="75"
+				Click="RegisterBtn_Click"
+				IsEnabled="False"
+				TabIndex="7" />
+			<Button
+				Content="Close"
+				Height="23"
+				HorizontalAlignment="Right"
+				Margin="0,172,87,0"
+				Name="CloseBtn"
+				VerticalAlignment="Top"
+				Width="75"
+				Grid.Row="2"
+				Click="CloseBtn_Click"
+				Grid.Column="1"
+				TabIndex="8" />
+			<Image
+				Style="{DynamicResource Img_Blank_16x16}"
+				HorizontalAlignment="Left"
+				Margin="247,10,0,0"
+				Name="UsernameValidImg"
+				VerticalAlignment="Top"
+				Grid.Row="1"
+				Stretch="None" />
+			<Image
+				HorizontalAlignment="Left"
+				Margin="247,57,0,0"
+				Name="PasswordValidImg"
+				Style="{DynamicResource Img_Blank_16x16}"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<Image
+				HorizontalAlignment="Left"
+				Margin="247,104,0,0"
+				Name="ConfirmPasswordValidImg"
+				Style="{DynamicResource Img_Blank_16x16}"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<TextBox
+				Height="23"
+				Margin="6,168,8,0"
+				MaxLines="4"
+				Name="EmailTxt"
+				VerticalAlignment="Top"
+				Grid.Row="1"
+				LostFocus="EmailTxt_LostFocus"
+				TabIndex="3" />
+			<Label
+				Content="E-mail"
+				HorizontalAlignment="Left"
+				Margin="6,151,0,0"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<TextBox
+				Grid.Row="1"
+				Height="23"
+				Margin="6,215,8,0"
+				MaxLines="5"
+				Name="ConfirmEmailTxt"
+				VerticalAlignment="Top"
+				LostFocus="ConfirmEmailTxt_LostFocus"
+				TabIndex="4" />
+			<Label
+				Content="Confirm E-mail"
+				Grid.Row="1"
+				HorizontalAlignment="Left"
+				Margin="6,198,0,0"
+				VerticalAlignment="Top" />
+			<Image
+				HorizontalAlignment="Left"
+				Margin="247,151,0,0"
+				Name="EmailValidImg"
+				Style="{DynamicResource Img_Blank_16x16}"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<Image
+				Grid.Row="1"
+				HorizontalAlignment="Left"
+				Margin="247,198,0,0"
+				Name="ConfirmEmailValidImg"
+				Style="{DynamicResource Img_Blank_16x16}"
+				VerticalAlignment="Top" />
+			<TextBox
+				Height="23"
+				Margin="6,262,8,0"
+				MaxLines="3"
+				Name="DisplayNameTxt"
+				VerticalAlignment="Top"
+				Grid.Row="1"
+				LostFocus="DisplayNameTxt_LostFocus"
+				TabIndex="5" />
+			<Label
+				Content="Display Name"
+				Height="16"
+				HorizontalAlignment="Left"
+				Margin="6,245,0,0"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<Image
+				HorizontalAlignment="Left"
+				Margin="247,245,0,0"
+				Name="DisplayNameValidImg"
+				Style="{DynamicResource Img_Blank_16x16}"
+				VerticalAlignment="Top"
+				Grid.Row="1" />
+			<Label
+				Content="Example: GalacticaActual"
+				Margin="0,27,6,0"
+				VerticalAlignment="Top"
+				Grid.Column="1"
+				Grid.Row="1"
+				Height="23"
+				VerticalContentAlignment="Center"
+				Foreground="#FFBEBEBE" />
+			<Label
+				Content="Minimum 8 letters/numbers in length."
+				Margin="0,74,6,0"
+				VerticalAlignment="Top"
+				Grid.Column="1"
+				Grid.Row="1"
+				Height="23"
+				VerticalContentAlignment="Center"
+				Foreground="#FFBEBEBE" />
+			<Label
+				Height="23"
+				Margin="0,121,6,0"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Center"
+				Grid.Column="1"
+				Grid.Row="1"
+				Foreground="#FFBEBEBE" />
+			<Label
+				Content="Valid E-mail Address"
+				Height="23"
+				Margin="0,168,6,0"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Center"
+				Grid.Column="1"
+				Grid.Row="1"
+				Foreground="#FFBEBEBE" />
+			<Label
+				Height="23"
+				Margin="0,215,6,0"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Center"
+				Grid.Column="1"
+				Grid.Row="1"
+				Foreground="#FFBEBEBE" />
+			<Label
+				Content="Example: Admiral Adama"
+				Height="23"
+				Margin="0,262,6,0"
+				VerticalAlignment="Top"
+				VerticalContentAlignment="Center"
+				Grid.Column="1"
+				Grid.Row="1"
+				Foreground="#FFBEBEBE" />
+		</Grid>
+	</Border>
 </Window>

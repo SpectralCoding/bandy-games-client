@@ -2,22 +2,34 @@
 	x:Class="BandyClient.Windows.LoginWnd"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	Title="Bandy Games Login"
-	ResizeMode="NoResize"
-	WindowStartupLocation="CenterScreen"
-	WindowStyle="None"
-	AllowsTransparency="True"
-	Background="#00000000"
-	mc:Ignorable="d"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	Style="{DynamicResource ResourceKey=Wnd_Modal}"
+	Title="Bandy Games Login"
+	WindowStartupLocation="CenterScreen"
 	Height="260"
-	Width="319">
+	Width="319"
+	>
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="/Styles/WindowStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/BorderStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/LabelTextBlockStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/TextBoxStylesRes.xaml" />
+				<ResourceDictionary
+					Source="/Styles/ImageStylesRes.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
 	<Border
-		BorderBrush="White"
-		BorderThickness="3"
-		CornerRadius="15"
-		Background="#FF003366">
+		Style="{DynamicResource Border_ModalWhiteRounded}"
+		>
 		<Grid
 			Width="277"
 			Height="222">
@@ -37,22 +49,19 @@
 				Height="23"
 				Margin="8,66,9,0"
 				Name="UsernameTxt"
-				VerticalAlignment="Top" />
+				VerticalAlignment="Top"
+				TabIndex="0" />
 			<Label
 				Content="Username"
 				Margin="8,48,0,0"
 				Name="UsernameLbl"
 				VerticalAlignment="Top"
-				Foreground="White"
-				Padding="0"
 				HorizontalAlignment="Left"
 				Grid.Row="1" />
 			<Label
 				Content="Password"
-				Foreground="White"
 				Margin="8,95,0,0"
 				Name="PasswordLbl"
-				Padding="0"
 				VerticalAlignment="Top"
 				HorizontalAlignment="Left"
 				Width="50" />
@@ -64,7 +73,8 @@
 				Name="LoginCmd"
 				VerticalAlignment="Top"
 				Width="59"
-				Click="LoginCmd_Click" />
+				Click="LoginCmd_Click"
+				TabIndex="3" />
 			<Button
 				Content="Close"
 				Height="23"
@@ -73,7 +83,8 @@
 				VerticalAlignment="Top"
 				HorizontalAlignment="Right"
 				Width="59"
-				Click="CloseBtn_Click" />
+				Click="CloseBtn_Click"
+				TabIndex="4" />
 			<CheckBox
 				Content="Remember me"
 				Height="16"
@@ -82,20 +93,21 @@
 				Name="RememberChk"
 				VerticalAlignment="Top"
 				Foreground="White"
-				Grid.Row="1" />
+				Grid.Row="1"
+				TabIndex="2" />
 			<PasswordBox
 				Height="23"
 				Margin="8,113,9,0"
 				Name="PasswordTxt"
-				VerticalAlignment="Top" />
+				VerticalAlignment="Top"
+				TabIndex="1" />
 			<Label
-				Foreground="White"
 				HorizontalAlignment="Left"
 				Margin="8,196,0,0"
 				Name="ForgotPasswordLbl"
-				Padding="0"
 				VerticalAlignment="Top"
-				MouseUp="ForgotPasswordLbl_MouseUp">
+				MouseUp="ForgotPasswordLbl_MouseUp"
+				Cursor="Hand">
 				<TextBlock>
 					<Underline>
 						Forgot Password?
@@ -107,9 +119,8 @@
 				Margin="0,196,9,0"
 				Name="CreateAccountLbl"
 				VerticalAlignment="Top"
-				Foreground="White"
-				Padding="0"
-				MouseUp="CreateAccountLbl_MouseUp">
+				MouseUp="CreateAccountLbl_MouseUp"
+				Cursor="Hand">
 				<TextBlock>
 					<Underline>
 						Create an Account

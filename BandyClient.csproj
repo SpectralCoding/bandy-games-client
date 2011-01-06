@@ -59,6 +59,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Resource Include="Styles\WindowStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="Styles\BorderStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ImageStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\LabelTextBlockStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBoxStylesRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\CreateAcctWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -71,6 +95,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Validation\RegistrationValidator.cs" />
     <Compile Include="Windows\CreateAcctWnd.xaml.cs">
       <DependentUpon>CreateAcctWnd.xaml</DependentUpon>
     </Compile>
@@ -107,6 +132,18 @@
       <Project>{EE8F7853-1769-4189-BCFC-C4DD254C9567}</Project>
       <Name>BandyLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BandyGames.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shield Alert 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shield Check 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shield X 16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
